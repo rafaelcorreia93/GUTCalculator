@@ -46,11 +46,17 @@ progress#file {
   progress {
     accent-color: #009B4D;
   }
+  .progress-bar {
+    background-color: #009B4D;
+  }
 }
 
 .mediana {
   progress {
     accent-color: #ED5E00;
+  }
+  .progress-bar {
+    background-color: #ED5E00;
   }
 }
 
@@ -58,19 +64,25 @@ progress#file {
   progress {
     accent-color: #FA4538;
   }
+  .progress-bar {
+    background-color: #FA4538;
+  }
 }
 
 .urgente {
   progress {
     accent-color: #BE1F1F;
   }
+  .progress-bar {
+    background-color: #BE1F1F;
+  }
 }
 
 .results {
   .label {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    width: 250px;
     text-transform: capitalize;
-    font-weight: bold;
     display: inline-block;
     height: auto;
     margin-left: 20px;
@@ -78,5 +90,12 @@ progress#file {
   .barra {
     display: flex;
     align-items: center;
+
+    ngb-progressbar.progress {
+      flex: 1;
+    }
   }
 }
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';

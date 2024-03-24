@@ -198,9 +198,10 @@
     <div class="section results" *ngIf="result > 0" [ngClass]="gravidade">
       <div class="resultLabel">Resultado:</div>
       <div class="barra">
-        <progress id="file" value="{{ result }}" max="125"> {{ result }} </progress>
+        <ngb-progressbar textType="white" [value]="result" [max]="125" />
         <div class="label">
-          Gravidade: {{ gravidade }}
+          <div>Gravidade: <b>{{ gravidade }}</b></div>
+          <div>Pontos: <b>{{ result }}</b> </div>
         </div>
       </div>
     </div>
